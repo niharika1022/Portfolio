@@ -1,36 +1,144 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js 15, React 19, and Tailwind CSS 4. Features smooth animations, dark mode support, and a clean, professional design.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Responsive Design**: Fully responsive across all device sizes
+- **Modern Animations**: Smooth scroll animations, hover effects, and loading animations
+- **Dark Mode**: Automatic dark/light mode based on system preference
+- **Performance Optimized**: Built with Next.js for optimal performance
+- **SEO Friendly**: Proper meta tags and structured data
+- **Accessible**: WCAG compliant with proper ARIA labels
+
+## 📁 Project Structure
+
+```
+my-portfolio/
+├── src/
+│   ├── app/
+│   │   ├── globals.css      # Global styles and animations
+│   │   ├── layout.js        # Root layout with metadata
+│   │   └── page.js          # Main page component
+│   ├── components/
+│   │   ├── Header.js        # Navigation header
+│   │   └── Footer.js        # Footer with social links
+│   └── sections/
+│       ├── Hero.js          # Hero section with typing animation
+│       ├── About.js         # About section with stats
+│       ├── Skills.js        # Skills section with progress bars
+│       ├── Projects.js      # Projects showcase
+│       └── Contact.js       # Contact form and info
+├── public/                  # Static assets
+└── package.json            # Dependencies and scripts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Sections
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 1. Hero Section
+- Animated typing text effect
+- Call-to-action buttons
+- Smooth scroll navigation
+- Responsive profile placeholder
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. About Section
+- Personal introduction
+- Animated statistics cards
+- Skill progress bars with gradient fills
+- Intersection Observer animations
 
-## Learn More
+### 3. Skills Section
+- Categorized skills (Frontend, Backend, Tools)
+- Animated progress bars
+- Hover effects on skill cards
+- Responsive grid layout
 
-To learn more about Next.js, take a look at the following resources:
+### 4. Projects Section
+- Project cards with hover animations
+- Technology tags
+- Live demo and source code links
+- Featured projects highlighting
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 5. Contact Section
+- Contact form with validation
+- Social media links
+- Contact information
+- Success/error states
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Technologies Used
 
-## Deploy on Vercel
+- **Framework**: Next.js 15.5.0
+- **UI Library**: React 19.1.0
+- **Styling**: Tailwind CSS 4
+- **Fonts**: Geist Sans & Geist Mono
+- **Icons**: Emoji icons (easily replaceable with SVG icons)
+- **Animations**: Custom CSS animations + Tailwind utilities
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Getting Started
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+2. **Run development server**:
+   ```bash
+   npm run dev
+   ```
+
+3. **Open your browser**:
+   Navigate to `http://localhost:3000`
+
+## 📦 Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+## 🎯 Customization
+
+### Personal Information
+Update the following files with your information:
+- `src/sections/Hero.js` - Name and title
+- `src/sections/About.js` - Bio and stats
+- `src/sections/Contact.js` - Contact details
+- `src/sections/Skills.js` - Skills and proficiency levels
+- `src/sections/Projects.js` - Your actual projects
+- `src/components/Footer.js` - Social links and copyright
+
+### Styling
+- Modify `src/app/globals.css` for custom animations
+- Update color schemes in Tailwind classes throughout components
+- Replace emoji icons with actual SVG icons from `public/` folder
+
+### Adding New Sections
+1. Create new component in `src/sections/`
+2. Import and add to `src/app/page.js`
+3. Add navigation link in `src/components/Header.js`
+
+## 🌟 Animation Features
+
+- **Scroll-triggered animations**: Components animate when they enter viewport
+- **Hover effects**: Interactive elements respond to user interaction
+- **Loading animations**: Smooth transitions and loading states
+- **Typing effect**: Hero section text types out dynamically
+- **Progress animations**: Skill bars fill with gradient colors
+
+## 📱 Responsive Design
+
+- Mobile-first approach
+- Breakpoints: sm (640px), md (768px), lg (1024px), xl (1280px)
+- Hamburger menu for mobile navigation
+- Flexible grid layouts
+
+## 🔧 Performance Optimizations
+
+- Next.js Image optimization
+- Code splitting and lazy loading
+- Optimized CSS with Tailwind
+- Minimal JavaScript bundle
+
+## 📝 License
+
+MIT License - feel free to use this template for your own portfolio!
