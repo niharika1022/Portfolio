@@ -7,7 +7,7 @@ export default function Hero() {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTypingComplete, setIsTypingComplete] = useState(false);
-  const fullText = "Full Stack Developer & Creative Problem Solver";
+  const fullText = "Full Stack Developer";
   const heroRef = useRef(null);
 
   useEffect(() => {

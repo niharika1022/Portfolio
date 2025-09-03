@@ -40,7 +40,7 @@ export default function Projects() {
       description: 'A responsive portfolio website showcasing projects and skills with modern animations and clean design principles.',
       image: '/api/placeholder/400/250',
       technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
-      github: 'https://github.com',
+      github: 'https://github.com/niharika1022/Portfolio.git',
       live: 'https://example.com',
       featured: true
     }
@@ -48,14 +48,12 @@ export default function Projects() {
 
   return (
     <section id="projects" ref={sectionRef} className="py-20 bg-orange-50 dark:bg-gray-900 relative overflow-hidden">
-      {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-orange-300 rounded-full mix-blend-soft-light filter blur-xl animate-pulse animate-bounce-custom"></div>
         <div className="absolute top-1/3 right-1/4 w-48 h-48 bg-amber-300 rounded-full mix-blend-soft-light filter blur-xl animate-pulse animate-bounce-custom" style={{animationDelay: '1s'}}></div>
         <div className="absolute bottom-1/4 left-1/3 w-32 h-32 bg-yellow-300 rounded-full mix-blend-soft-light filter blur-xl animate-pulse animate-bounce-custom" style={{animationDelay: '2s'}}></div>
       </div>
 
-      {/* Floating Particles */}
       <div className="absolute inset-0 pointer-events-none">
         {[...Array(15)].map((_, i) => (
           <div
@@ -75,7 +73,7 @@ export default function Projects() {
         <div className={`transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
-          {/* Section Header */}
+
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Featured Projects
@@ -86,7 +84,6 @@ export default function Projects() {
             </p>
           </div>
 
-          {/* Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <div 
@@ -100,7 +97,6 @@ export default function Projects() {
                   transform: isVisible ? 'translateY(0)' : 'translateY(20px)'
                 }}
               >
-                {/* Project Image */}
                 <div className="relative overflow-hidden">
                   <div className="w-full h-48 bg-gradient-to-br from-orange-400 to-amber-600 flex items-center justify-center">
                     <span className="text-4xl text-white">🚀</span>
@@ -108,7 +104,6 @@ export default function Projects() {
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
                 </div>
 
-                {/* Project Content */}
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
@@ -124,7 +119,6 @@ export default function Projects() {
                     {project.description}
                   </p>
 
-                  {/* Technologies */}
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.map((tech, techIndex) => (
                       <span
@@ -136,7 +130,6 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  {/* Action Buttons */}
                   <div className="flex space-x-4">
                     <a
                       href={project.github}
@@ -160,7 +153,6 @@ export default function Projects() {
             ))}
           </div>
 
-          {/* View More Button */}
           <div className="text-center mt-12">
             <button className="border-2 border-orange-600 text-orange-600 dark:text-orange-400 dark:border-orange-400 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-orange-600 hover:text-white dark:hover:bg-orange-400 dark:hover:text-gray-900">
               View All Projects
